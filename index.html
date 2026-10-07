@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campolux – Lampadari dal 1961 a Campo Ligure</title>
+  <meta name="description" content="Campolux, Campo Ligure (GE): lampadari e illuminazione, ristrutturazioni, lampadari per chiese, progettazione illuminotecnica. Dal 1961.">
+  <meta name="theme-color" content="#0e1a24">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Campolux – Lampadari dal 1961">
+  <meta property="og:description" content="Lampadari, restauri e progetti di illuminazione a Campo Ligure dal 1961.">
+  <meta property="og:locale" content="it_IT">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Imposta giorno/notte prima del primo disegno della pagina, così non c'è lampeggio.
+       Ordine: scelta salvata dal visitatore → preferenza del suo dispositivo.
+       Per aprire sempre in modalità notte: sostituisci la riga "t = ..." con  t = 'night'; -->
+  <script>
+    (function () {
+      var t, r = document.documentElement;
+      try { t = localStorage.getItem('campolux-theme'); } catch (e) {}
+      if (t !== 'day' && t !== 'night') {
+        t = matchMedia('(prefers-color-scheme: light)').matches ? 'day' : 'night';
+      }
+      r.dataset.theme = t;
+      if (t === 'night') r.classList.add('intro');
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LightingStore",
+    "name": "Campolux S.n.c.",
+    "description": "Lampadari e illuminazione, ristrutturazioni, lampadari per chiese, progettazione illuminotecnica.",
+    "foundingDate": "1961",
+    "telephone": "+39 010 921028",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Piazzale Guglielmo Marconi, 22",
+      "postalCode": "16013",
+      "addressLocality": "Campo Ligure",
+      "addressRegion": "GE",
+      "addressCountry": "IT"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 44.5309, "longitude": 8.7019 }
+  }
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="#top" aria-label="Campolux, torna in alto">Campolux</a>
+  <div class="header-right">
+    <nav aria-label="Principale">
+      <a href="#storia">Storia</a>
+      <a href="#lavoriamo">Cosa facciamo</a>
+      <a href="#dove">Dove siamo</a>
+    </nav>
+
+    <!-- Interruttore: acceso = notte (lampadario acceso), spento = giorno -->
+    <button id="lightswitch" class="lightswitch" type="button" role="switch"
+            aria-checked="true" aria-label="Modalità notte" title="Accendi o spegni la luce">
+      <span class="plate" aria-hidden="true"><span class="rocker"></span></span>
+      <span class="mode-label" aria-hidden="true">Notte</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Tutto quanto è luce.</h1>
+      <p class="lead">Lampadari, restauri e progetti di illuminazione a Campo Ligure dal 1961.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="tel:+39010921028">Chiama il negozio</a>
+        <a class="btn btn-ghost" href="#prenota">Prenota una visita</a>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 400 420" class="chandelier" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#ffd98a" stop-opacity=".95"/>
+            <stop offset=".35" stop-color="#ffd98a" stop-opacity=".35"/>
+            <stop offset="1" stop-color="#ffd98a" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+
+        <!-- luci: si accendono una dopo l'altra -->
+        <g class="lights">
+          <g class="light" style="--d:.5s"><circle cx="95"  cy="212" r="46" fill="url(#glow)"/><circle cx="95"  cy="212" r="8" fill="#ffe7b0"/></g>
+          <g class="light" style="--d:.8s"><circle cx="305" cy="212" r="46" fill="url(#glow)"/><circle cx="305" cy="212" r="8" fill="#ffe7b0"/></g>
+          <g class="light" style="--d:1.1s"><circle cx="45"  cy="292" r="46" fill="url(#glow)"/><circle cx="45"  cy="292" r="8" fill="#ffe7b0"/></g>
+          <g class="light" style="--d:1.4s"><circle cx="355" cy="292" r="46" fill="url(#glow)"/><circle cx="355" cy="292" r="8" fill="#ffe7b0"/></g>
+          <g class="light" style="--d:1.8s"><circle cx="200" cy="372" r="60" fill="url(#glow)"/></g>
+        </g>
+
+        <!-- struttura -->
+        <g class="frame" fill="none" stroke="#c8a24a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M200 0V70"/>
+          <path d="M200 8l-5 8 5 8 5-8z M200 30l-5 8 5 8 5-8z M200 52l-5 8 5 8 5-8z"/>
+          <ellipse cx="200" cy="96" rx="15" ry="22"/>
+          <path d="M200 118V340"/>
+          <ellipse cx="200" cy="180" rx="10" ry="14"/>
+          <ellipse cx="200" cy="250" rx="12" ry="16"/>
+
+          <path d="M200 180C170 180 120 190 95 225"/>
+          <path d="M200 180C230 180 280 190 305 225"/>
+          <path d="M200 250C160 250 80 262 45 305"/>
+          <path d="M200 250C240 250 320 262 355 305"/>
+
+          <path d="M85 225h20l-4 14H89z"/>
+          <path d="M295 225h20l-4 14h-12z"/>
+          <path d="M35 305h20l-4 14H39z"/>
+          <path d="M345 305h20l-4 14h-12z"/>
+
+          <path d="M200 340l-9 20c-4 10 4 20 9 20s13-10 9-20z" fill="#c8a24a" fill-opacity=".12"/>
+
+          <!-- lampadine spente: si vedono solo di giorno -->
+          <g class="bulbs-off">
+            <circle cx="95"  cy="212" r="8"/>
+            <circle cx="305" cy="212" r="8"/>
+            <circle cx="45"  cy="292" r="8"/>
+            <circle cx="355" cy="292" r="8"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- STORIA -->
+  <section id="storia" class="section">
+    <div class="wrap two-col">
+      <h2>Una storia che parte dal 1961</h2>
+      <div class="prose">
+        <p>Campolux nasce dall’intuizione di due soci che, in un mestiere allora nuovo, vedono una finestra sul futuro. All’inizio sono tra i primi in Liguria a fabbricare lampadari, e a venderli all’ingrosso.</p>
+        <p>Più avanti arriva il dettaglio, con un’esposizione a Campo Ligure che è ancora aperta oggi.</p>
+        <p>Oggi l’attività è portata avanti dai figli, cresciuti in azienda. Lavorano in modo moderno, con il supporto delle più grandi aziende del settore, senza perdere la mano dell’artigiano.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COSA FACCIAMO -->
+  <section id="lavoriamo" class="section">
+    <div class="wrap">
+      <h2>Cosa facciamo</h2>
+      <dl class="services">
+        <div class="service">
+          <dt>Esposizione e vendita</dt>
+          <dd>Nella nostra esposizione di Campo Ligure puoi vedere dal vivo i lampadari e l’illuminazione dei marchi che trattiamo.</dd>
+        </div>
+        <div class="service">
+          <dt>Ristrutturazioni</dt>
+          <dd>Con attrezzature, materiali ed esperienza artigianale diamo nuova vita a oggetti antichi o semplicemente vecchi. Anche un lampadario classico può tornare moderno.</dd>
+        </div>
+        <div class="service">
+          <dt>Lampadari per chiese</dt>
+          <dd>Siamo partiti, decenni fa, da una richiesta di restauro di antichi lampadari in pessime condizioni. Da lì viene la nostra esperienza con le chiese.</dd>
+        </div>
+        <div class="service">
+          <dt>Progettazione e consulenza</dt>
+          <dd>Consulenze, progetti, rendering e calcoli illuminotecnici, per interni, esterni, uffici e attività commerciali.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- MARCHI TRATTATI -->
+  <section id="marchi" class="section">
+    <div class="wrap two-col">
+      <div>
+        <h2>I marchi che trattiamo</h2>
+        <p class="side-note">Clicca sul nome per aprire il sito dell’azienda.</p>
+      </div>
+      <ul class="brands">
+        <li><a href="https://www.artemide.com/" target="_blank" rel="noopener noreferrer" aria-label="Artemide (si apre il sito dell’azienda in una nuova scheda)">Artemide</a></li>
+        <!-- Per aggiungere un marchio copia la riga qui sopra e cambia indirizzo e nome (due volte: nel testo e in aria-label).
+             Usa l'indirizzo del sito ufficiale dell'azienda e controlla che si apra, prima di pubblicare.
+        <li><a href="https://www.sito-del-marchio.com/" target="_blank" rel="noopener noreferrer" aria-label="NOME (si apre il sito dell’azienda in una nuova scheda)">NOME</a></li>
+        -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- GALLERIA FOTO: per attivarla
+       1. metti le foto nella cartella img/ (JPG o WebP, lato lungo ~1600 px, meglio sotto i 300 KB)
+       2. cancella la riga qui sotto che contiene  &lt;!-- GALLERIA-INIZIO  e quella in fondo che contiene  GALLERIA-FINE --&gt;
+       3. per ogni foto copia una riga &lt;figure&gt;, cambia nome file, alt e didascalia
+          (alt = cosa si vede, per chi non vede l'immagine e per Google; la didascalia è facoltativa)
+       4. se un gruppo (negozio o lavori) non ha foto, cancella tutto il suo &lt;div class="gallery-group"&gt; -->
+
+  <!-- GALLERIA-INIZIO
+  <section id="galleria" class="section">
+    <div class="wrap">
+      <h2>Il negozio e i nostri lavori</h2>
+
+      <div class="gallery-group">
+        <h3>Il negozio</h3>
+        <div class="gallery">
+          <figure><a href="img/negozio-1.jpg"><img src="img/negozio-1.jpg" alt="Descrivi cosa si vede" loading="lazy"></a><figcaption>Didascalia</figcaption></figure>
+          <figure><a href="img/negozio-2.jpg"><img src="img/negozio-2.jpg" alt="Descrivi cosa si vede" loading="lazy"></a><figcaption>Didascalia</figcaption></figure>
+          <figure><a href="img/negozio-3.jpg"><img src="img/negozio-3.jpg" alt="Descrivi cosa si vede" loading="lazy"></a><figcaption>Didascalia</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="gallery-group">
+        <h3>I nostri lavori</h3>
+        <div class="gallery">
+          <figure><a href="img/lavoro-1.jpg"><img src="img/lavoro-1.jpg" alt="Descrivi cosa si vede" loading="lazy"></a><figcaption>Didascalia</figcaption></figure>
+          <figure><a href="img/lavoro-2.jpg"><img src="img/lavoro-2.jpg" alt="Descrivi cosa si vede" loading="lazy"></a><figcaption>Didascalia</figcaption></figure>
+          <figure><a href="img/lavoro-3.jpg"><img src="img/lavoro-3.jpg" alt="Descrivi cosa si vede" loading="lazy"></a><figcaption>Didascalia</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  GALLERIA-FINE -->
+
+  <!-- PRENOTA UNA VISITA -->
+  <section id="prenota" class="section">
+    <div class="wrap two-col">
+      <div>
+        <h2>Prenota una visita</h2>
+        <p class="side-note">Dicci quando preferisci passare e di cosa hai bisogno: ti ricontattiamo per confermare.</p>
+      </div>
+
+      <form id="visit-form" class="form">
+        <div class="field">
+          <label for="f-nome">Nome e cognome</label>
+          <input id="f-nome" name="nome" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-tel">Telefono</label>
+          <input id="f-tel" name="telefono" type="tel" autocomplete="tel" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-giorno">Giorno</label>
+            <input id="f-giorno" name="giorno" type="date" required>
+          </div>
+          <div class="field">
+            <label for="f-fascia">Quando</label>
+            <select id="f-fascia" name="fascia">
+              <option>Mattina</option>
+              <option>Pomeriggio</option>
+              <option>Indifferente</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-motivo">Di cosa hai bisogno</label>
+          <select id="f-motivo" name="motivo">
+            <option>Un lampadario o una lampada nuova</option>
+            <option>Ristrutturare un lampadario</option>
+            <option>Lampadari per chiesa</option>
+            <option>Un progetto di illuminazione</option>
+            <option>Altro</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-note">Note (facoltative)</label>
+          <textarea id="f-note" name="note" rows="3"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Invia la richiesta</button>
+        <p id="form-msg" class="form-msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- DOVE SIAMO -->
+  <section id="dove" class="section contact">
+    <div class="wrap">
+    <div class="two-col">
+      <h2>Dove siamo</h2>
+      <div>
+        <address>
+          <strong>Campolux S.n.c.</strong><br>
+          Piazzale Guglielmo Marconi, 22<br>
+          16013 Campo Ligure (GE)
+        </address>
+
+        <p class="phone"><a href="tel:+39010921028">010 921028</a></p>
+
+        <!-- Gli orari si compilano in script.js più sotto (costante HOURS) -->
+        <div class="hours">
+          <h3 class="hours-title">Orari di apertura</h3>
+          <div id="orari" aria-live="polite">
+            <p class="hours-fallback">Orari in aggiornamento. Chiamaci per sapere quando passare.</p>
+          </div>
+        </div>
+
+        <!-- TODO: aggiungere l'email di contatto
+        <p><a href="mailto:info@campolux.it">info@campolux.it</a></p>
+        -->
+
+        <div class="actions">
+          <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Campolux+Piazzale+Marconi+22+Campo+Ligure" target="_blank" rel="noopener">Apri in Google Maps</a>
+          <a class="btn btn-outline" href="https://www.openstreetmap.org/?mlat=44.5309&amp;mlon=8.7019#map=17/44.5309/8.7019" target="_blank" rel="noopener">Apri in OpenStreetMap</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mappa: si carica solo quando il visitatore la richiede, così nessun dato va a terzi prima -->
+    <div id="map" class="map">
+      <div class="map-placeholder">
+        <p><strong>Piazzale Marconi 22, Campo Ligure</strong></p>
+        <p>La mappa è di OpenStreetMap e si carica solo quando la richiedi.</p>
+        <button id="map-load" class="btn btn-outline" type="button">Mostra la mappa</button>
+      </div>
+    </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© <span id="year">2026</span> Campolux S.n.c. – Piazzale Marconi 22, 16013 Campo Ligure (GE)</p>
+    <!-- TODO: aggiungere P.IVA / C.F. / REA (obbligatori in Italia per i siti di attività commerciali) -->
+  </div>
+</footer>
+
+<!-- Ingrandimento delle foto (compare solo se la galleria è attiva) -->
+<dialog id="lightbox" class="lightbox" aria-label="Foto ingrandita">
+  <div class="lb-inner">
+    <img alt="">
+    <p class="lb-caption"></p>
+  </div>
+  <button class="lb-btn lb-close" type="button" aria-label="Chiudi">×</button>
+  <button class="lb-btn lb-prev" type="button" aria-label="Foto precedente">‹</button>
+  <button class="lb-btn lb-next" type="button" aria-label="Foto successiva">›</button>
+</dialog>
+
+<script>
+(() => {
+  /* =====================================================================
+     DA COMPILARE
+     ===================================================================== */
+
+  // Email che riceve le richieste di visita. Finché è vuota il modulo
+  // invita a chiamare al telefono.
+  const BOOKING_EMAIL = '';
+
+  // Orari di apertura. Ogni giorno è una lista di fasce [apre, chiude];
+  // lista vuota = chiuso. Con HOURS = null compare "Orari in aggiornamento".
+  // Esempio (da sostituire con gli orari veri):
+  //   const HOURS = {
+  //     lun: [],
+  //     mar: [['09:00', '12:30'], ['15:00', '19:00']],
+  //     mer: [['09:00', '12:30'], ['15:00', '19:00']],
+  //     gio: [['09:00', '12:30'], ['15:00', '19:00']],
+  //     ven: [['09:00', '12:30'], ['15:00', '19:00']],
+  //     sab: [['09:00', '12:30']],
+  //     dom: []
+  //   };
+  const HOURS = null;
+
+  /* =====================================================================
+     INTERRUTTORE GIORNO / NOTTE
+     ===================================================================== */
+  const root = document.documentElement;
+  const btn = document.getElementById('lightswitch');
+  const label = btn.querySelector('.mode-label');
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  let introTimer;
+
+  function setIntro(on) {
+    clearTimeout(introTimer);
+    root.classList.remove('intro');
+    if (on && !reduceMotion.matches) {
+      void root.offsetWidth;                      // riavvia l'animazione
+      root.classList.add('intro');
+      introTimer = setTimeout(() => root.classList.remove('intro'), 3400);
+    }
+  }
+
+  function sync(mode) {
+    const night = mode === 'night';
+    btn.setAttribute('aria-checked', String(night));
+    label.textContent = night ? 'Notte' : 'Giorno';
+    themeMeta.content = night ? '#0e1a24' : '#eef1f3';
+  }
+
+  function apply(mode) {
+    root.dataset.theme = mode;
+    sync(mode);
+    setIntro(mode === 'night');
+    try { localStorage.setItem('campolux-theme', mode); } catch (e) {}
+  }
+
+  function toggle() {
+    const next = root.dataset.theme === 'night' ? 'day' : 'night';
+
+    if (!document.startViewTransition || reduceMotion.matches) {
+      // Senza View Transitions: semplice dissolvenza dei colori
+      root.classList.add('fade');
+      apply(next);
+      setTimeout(() => root.classList.remove('fade'), 800);
+      return;
+    }
+
+    // Il nuovo tema si apre a cerchio partendo dall'interruttore
+    const r = btn.getBoundingClientRect();
+    const x = r.left + r.width / 2;
+    const y = r.top + r.height / 2;
+    const radius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+
+    const t = document.startViewTransition(() => apply(next));
+    t.ready.then(() => {
+      root.animate(
+        { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${radius}px at ${x}px ${y}px)`] },
+        { duration: 750, easing: 'cubic-bezier(.4, 0, .2, 1)', pseudoElement: '::view-transition-new(root)' }
+      );
+    }).catch(() => {});
+  }
+
+  sync(root.dataset.theme);
+  if (root.classList.contains('intro')) {
+    introTimer = setTimeout(() => root.classList.remove('intro'), 3400);
+  }
+  btn.addEventListener('click', toggle);
+
+  /* =====================================================================
+     ORARI DI APERTURA
+     ===================================================================== */
+  const ORDER = [['lun', 'Lunedì'], ['mar', 'Martedì'], ['mer', 'Mercoledì'], ['gio', 'Giovedì'],
+                 ['ven', 'Venerdì'], ['sab', 'Sabato'], ['dom', 'Domenica']];
+  const EN_DAY = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 };
+  const toMin = s => { const [h, m] = s.split(':'); return Number(h) * 60 + Number(m); };
+  const slotsOf = i => (HOURS && HOURS[ORDER[i][0]]) || [];
+
+  function nowInRome() {
+    const parts = {};
+    new Intl.DateTimeFormat('en-US', {
+      timeZone: 'Europe/Rome', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+    }).formatToParts(new Date()).forEach(p => { parts[p.type] = p.value; });
+    return { day: EN_DAY[parts.weekday], min: Number(parts.hour) * 60 + Number(parts.minute) };
+  }
+
+  function openStatus() {
+    const { day, min } = nowInRome();
+    for (const [a, b] of slotsOf(day)) {
+      if (min >= toMin(a) && min < toMin(b)) return { open: true, text: `Aperto ora, fino alle ${b}` };
+    }
+    for (let i = 0; i < 8; i++) {
+      const d = (day + i) % 7;
+      for (const [a] of slotsOf(d)) {
+        if (i > 0 || toMin(a) > min) {
+          const when = i === 0 ? 'oggi' : i === 1 ? 'domani' : ORDER[d][1].toLowerCase();
+          return { open: false, text: `Chiuso ora, riapriamo ${when} alle ${a}` };
+        }
+      }
+    }
+    return { open: false, text: 'Chiuso ora' };
+  }
+
+  function renderHours() {
+    const box = document.getElementById('orari');
+    if (!HOURS) return;
+
+    const status = document.createElement('p');
+    status.className = 'hours-status';
+
+    const list = document.createElement('dl');
+    list.className = 'hours-list';
+    const rows = ORDER.map(([, name], i) => {
+      const row = document.createElement('div');
+      row.className = 'hours-row';
+      const dt = document.createElement('dt');
+      dt.textContent = name;
+      const dd = document.createElement('dd');
+      const slots = slotsOf(i);
+      dd.textContent = slots.length ? slots.map(([a, b]) => `${a}–${b}`).join(' e ') : 'Chiuso';
+      row.append(dt, dd);
+      list.append(row);
+      return row;
+    });
+
+    box.replaceChildren(status, list);
+
+    const update = () => {
+      const s = openStatus();
+      status.textContent = s.text;
+      status.classList.toggle('is-open', s.open);
+      const today = nowInRome().day;
+      rows.forEach((row, i) => row.classList.toggle('today', i === today));
+    };
+    update();
+    setInterval(update, 60000);
+  }
+  renderHours();
+
+  /* =====================================================================
+     PRENOTA UNA VISITA (apre la mail già compilata)
+     ===================================================================== */
+  const form = document.getElementById('visit-form');
+  const msg = document.getElementById('form-msg');
+  const dateInput = document.getElementById('f-giorno');
+  dateInput.min = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Rome' });
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    msg.textContent = '';
+    if (!form.reportValidity()) return;
+
+    const f = new FormData(form);
+    const [y, m, d] = String(f.get('giorno')).split('-').map(Number);
+    const weekday = (new Date(y, m - 1, d).getDay() + 6) % 7;     // 0 = lunedì
+
+    if (HOURS && slotsOf(weekday).length === 0) {
+      msg.textContent = `${ORDER[weekday][1]} siamo chiusi: scegli un altro giorno.`;
+      return;
+    }
+    if (!BOOKING_EMAIL) {
+      msg.textContent = 'Il modulo sarà attivo a breve. Intanto chiamaci allo 010 921028.';
+      return;
+    }
+
+    const body = [
+      `Nome: ${f.get('nome')}`,
+      `Telefono: ${f.get('telefono')}`,
+      `Giorno: ${String(d).padStart(2, '0')}/${String(m).padStart(2, '0')}/${y}`,
+      `Quando: ${f.get('fascia')}`,
+      `Di cosa ha bisogno: ${f.get('motivo')}`,
+      f.get('note') ? `Note: ${f.get('note')}` : ''
+    ].filter(Boolean).join('\n');
+
+    location.href = `mailto:${BOOKING_EMAIL}?subject=${encodeURIComponent('Richiesta di visita – ' + f.get('nome'))}&body=${encodeURIComponent(body)}`;
+    msg.textContent = 'Si è aperto il tuo programma di posta: premi “Invia” per completare la richiesta.';
+  });
+
+  /* =====================================================================
+     MAPPA (si carica al clic)
+     ===================================================================== */
+  document.getElementById('map-load').addEventListener('click', () => {
+    const frame = document.createElement('iframe');
+    frame.src = 'https://www.openstreetmap.org/export/embed.html?bbox=8.6919%2C44.5259%2C8.7119%2C44.5359&layer=mapnik&marker=44.5309%2C8.7019';
+    frame.title = 'Mappa: Campolux, Piazzale Marconi 22, Campo Ligure';
+    frame.loading = 'lazy';
+    frame.referrerPolicy = 'no-referrer';
+    document.getElementById('map').replaceChildren(frame);
+  });
+
+  /* =====================================================================
+     GALLERIA: ingrandimento foto
+     ===================================================================== */
+  const photoLinks = [...document.querySelectorAll('.gallery a')];
+  const box = document.getElementById('lightbox');
+  if (photoLinks.length) {
+    const bigImg = box.querySelector('img');
+    const caption = box.querySelector('.lb-caption');
+    const prev = box.querySelector('.lb-prev');
+    const next = box.querySelector('.lb-next');
+    let current = 0;
+
+    const show = i => {
+      current = (i + photoLinks.length) % photoLinks.length;
+      const a = photoLinks[current];
+      const fig = a.closest('figure');
+      bigImg.src = a.href;
+      bigImg.alt = a.querySelector('img').alt;
+      caption.textContent = fig.querySelector('figcaption') ? fig.querySelector('figcaption').textContent : '';
+    };
+
+    photoLinks.forEach((a, i) => a.addEventListener('click', e => {
+      e.preventDefault();
+      show(i);
+      box.showModal();
+    }));
+    prev.addEventListener('click', () => show(current - 1));
+    next.addEventListener('click', () => show(current + 1));
+    box.querySelector('.lb-close').addEventListener('click', () => box.close());
+    box.addEventListener('click', e => {                       // clic sullo sfondo = chiudi
+      if (e.target === box || e.target.classList.contains('lb-inner')) box.close();
+    });
+    box.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') show(current - 1);
+      if (e.key === 'ArrowRight') show(current + 1);
+    });
+    if (photoLinks.length < 2) { prev.hidden = true; next.hidden = true; }
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
